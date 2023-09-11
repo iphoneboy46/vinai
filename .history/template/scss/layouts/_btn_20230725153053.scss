@@ -1,0 +1,16 @@
+.btn{
+  width: fit-content;
+  padding: 1.1rem 3rem;
+  border-radius:12rem;
+  background-color:$color-pri;
+  
+
+  &-text{
+    color: var(--white, #FFF);
+    @include fz-14;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 21px */
+  }
+}

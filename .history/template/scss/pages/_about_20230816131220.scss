@@ -1,0 +1,353 @@
+.about-video {
+    position: relative;
+
+    .said-main-text {
+        @include fz-32;
+    }
+
+    .said-main-phay {
+        max-width: 26rem;
+    }
+
+    &-tt {
+    }
+
+    &-text {
+        position: absolute;
+        font-size: 20rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5;
+        -webkit-text-stroke-width: 0.1rem !important;
+        -webkit-text-stroke-color: white !important;
+        color: transparent;
+        z-index: -1;
+        opacity: 0.2;
+        letter-spacing: 0.5rem;
+
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+        &:first-child {
+            top: 6%;
+            left: 3%;
+        }
+
+        &:last-child {
+            top: 35%;
+            right: 3%;
+        }
+    }
+}
+
+.about-vision {
+    position: relative;
+
+    .title-main {
+        // margin: 0 auto -10rem;
+        transform: translateY(100%);
+    }
+
+    .box-gsap {
+        padding-top: 17rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../assets/images/vision.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        // background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .said-main-wrap {
+        max-width: 80rem;
+    }
+
+    .said-main-text {
+        @include fz-20;
+        font-weight: 700;
+    }
+
+    .said-main-phay {
+        top: -3rem;
+        left: 10rem;
+        max-width: 10rem;
+    }
+}
+
+.about-mission {
+    .title-main {
+        margin-bottom: 5rem;
+    }
+}
+
+.about-pila {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    .title-main {
+        margin-bottom: 5rem;
+    }
+
+    &-list {
+    }
+
+    &-item {
+        width: 100%;
+        height: 100%;
+        padding: 5.6rem 0;
+      
+        cursor: pointer;
+        position: relative;
+
+        &-tt {
+            position: absolute;
+            pointer-events: none;
+            font-size: 15rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5;
+            color: transparent;
+            z-index: 2;
+            opacity: 0.1;
+            letter-spacing: 0.5rem;
+            -webkit-text-stroke: 0.1rem white !important;
+        }
+
+        &:first-child {
+            background: url(../assets/images/pila1.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            .about-pila-item-tt{
+                top: 50%;
+                left: 100%;
+                transform: translate(-50%, -50%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(../assets/images/pila1.1.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s linear;
+            }
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-back {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-font {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            background: url(../assets/images/pila2.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            .about-pila-item-tt{
+                top: 50%;
+                left: -25%;
+                transform: translate(-50%, -50%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(../assets/images/pila2.1.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s linear;
+            }
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-back {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-font {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &:last-child {
+            background: url(../assets/images/pila3.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+           
+            .about-pila-item-tt{
+                top: 50%;
+                left: 110%;
+                transform: translate(-50%, -50%);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(../assets/images/pila3.1.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s linear;
+            }
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-back {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .about-pila-item-font {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &-font {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 4rem;
+            width: fit-content;
+            margin: auto;
+            transition: all 0.5s ease;
+            opacity: 1;
+            visibility: visible;
+            &-lf {
+                color: rgba(255, 255, 255, 0.2);
+
+                font-size: 9.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.5; /* 144px */
+            }
+
+            &-rt {
+                color: $color-text;
+                @include fz-40;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.3; /* 52px */
+            }
+        }
+
+        &-back {
+            display: flex;
+            align-items: center;
+            column-gap: 4rem;
+            max-width: 88rem;
+            margin: auto;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.5s ease;
+            visibility: hidden;
+            padding:0.5rem;
+            &-lf {
+                &-title {
+                    color: var(--white, #fff);
+                    @include fz-32;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.3;
+                }
+
+                &-num {
+                    color: rgba(255, 255, 255, 0.2);
+                    font-size: 9.6rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.5;
+                }
+            }
+
+            &-rt {
+                &-text {
+                    max-height: 17.2rem;
+                    overflow-y: auto;
+                    color: $color-text;
+                    @include fz-16;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-right: 0.3rem;
+                    &::-webkit-scrollbar {
+                        width: 0.3rem;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: #19b7fb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-mile{
+    &-top{
+        max-width: 84rem;
+        margin:auto;
+
+        &-lf{
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.about-video {
+    position: relative;
+
+    .said-main-text {
+        @include fz-32;
+    }
+
+    .said-main-phay {
+        max-width: 26rem;
+    }
+
+    &-tt {
+    }
+
+    &-text {
+        position: absolute;
+        font-size: 20rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5;
+        -webkit-text-stroke-width: 0.1rem !important;
+        -webkit-text-stroke-color: white !important;
+        color: transparent;
+        z-index: -1;
+        opacity: 0.2;
+        letter-spacing: 0.5rem;
+
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+        &:first-child {
+            top: 6%;
+            left: 3%;
+        }
+
+        &:last-child {
+            top: 35%;
+            right: 3%;
+        }
+    }
+}
+
+.about-vision {
+    position: relative;
+
+    .title-main {
+        // margin: 0 auto -10rem;
+        transform: translateY(100%);
+    }
+
+    .box-gsap {
+        padding-top: 17rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../assets/images/vision.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        // background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .said-main-wrap {
+        max-width: 80rem;
+    }
+
+    .said-main-text {
+        @include fz-20;
+        font-weight: 700;
+    }
+
+    .said-main-phay {
+        top: -3rem;
+        left: 10rem;
+        max-width: 10rem;
+    }
+}
+
+.about-mission {
+    .title-main {
+        margin-bottom: 5rem;
+    }
+}
+
+.about-pila {
+    .title-main {
+        margin-bottom: 10rem;
+    }
+
+    &-list {
+    }
+
+    &-item {
+        background: url(../assets/images/pila1.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+
+        &-font {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 4rem;
+            width: fit-content;
+            margin: auto;
+
+            &-lf {
+                color: rgba(255, 255, 255, 0.2);
+
+                font-size: 9.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.5; /* 144px */
+            }
+
+            &-rt {
+                color: var(--white, #fff);
+                @include fz-40;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 52px */
+            }
+        }
+    }
+}

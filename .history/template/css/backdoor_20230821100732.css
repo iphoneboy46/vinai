@@ -1,0 +1,7 @@
+
+@media screen and (max-width:600px) {
+    .about-mile-bottom-list::before {
+        top: 45%;
+    }
+    
+}

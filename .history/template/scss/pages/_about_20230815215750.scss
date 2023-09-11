@@ -1,0 +1,16 @@
+.about-video {
+    position: relative;
+
+    &-tt {
+        &-text {
+            position: absolute;
+            font-size: 20rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5;
+            -webkit-text-stroke-width: 0.1rem !important;
+            -webkit-text-stroke-color: white !important;
+            color: transparent;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.banner-home {
+    background-image: url(../assets/images/bannerHome.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    height: 50vw;
+    // height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-wrap {
+        align-items: center;
+        transition: all 1s linear;
+    }
+
+    &-list {
+        .swiper-slide {
+            .banner-home-wrap {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        .swiper-slide-active {
+            .banner-home-wrap {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        flex-direction: column;
+        row-gap: 3vw;
+    }
+
+    .swiper-pagination-bullet {
+        position: relative;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.2vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5; 
+        width: 1vw;
+        height: 1vw;
+        &::before{
+            content: "";
+            position: absolute;
+            top:85%;
+            left: -250%;
+            transform: translate(0%, -50%);
+            width: 1vw;
+            height: 1vw;
+            background: $color-pri;
+            border-radius: 50%;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+    }
+
+    &-lf {
+        display: flex;
+        justify-content: center;
+
+        .btn-play {
+            left: -10% !important;
+            top: 75% !important;
+            width: 7vw;
+            height: 7vw;
+            transform: none;
+        }
+
+        .btn-play-box {
+            width: 2.5vw;
+            height: 2.5vw;
+        }
+
+        .scrolld-btn-inner {
+            font-size: 0.8vw;
+        }
+    }
+
+    &-img {
+        width: 22vw;
+        position: relative;
+        padding-bottom: 2vw;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        animation: rungLac 5s linear infinite forwards;
+        @keyframes rungLac {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translate(5%, 5%) rotate(3deg);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-rt {
+        &-title {
+            color: $color-text;
+            font-size: 3.2vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1vw;
+        }
+
+        &-text {
+            color: $color-text;
+            font-size: 1.1vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 2.5vw;
+        }
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 8vw;
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            column-gap: 1.5vw;
+
+            &-text {
+                color: #fff;
+                font-size: 0.8vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5;
+                position: relative;
+
+                &::before {
+                    content: "|";
+                    margin-left: 0.5vw;
+                }
+            }
+
+            &-list {
+                display: flex;
+                align-items: center;
+                column-gap: 1vw;
+            }
+
+            &-link {
+                width: 1.2vw;
+                height: 1.2vw;
+                display: block;
+
+                @include hover {
+                    img {
+                        filter: brightness(0) saturate(100%) invert(51%) sepia(27%) saturate(6295%) hue-rotate(170deg)
+                            brightness(107%) contrast(101%);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

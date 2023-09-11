@@ -1,0 +1,25 @@
+.banner-home{
+    background-image: url(../assets/images/bannerHome.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    height: 50vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+    &-img{
+        width: 20vw;
+        
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }   
+}

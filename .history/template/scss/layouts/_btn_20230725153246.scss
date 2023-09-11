@@ -1,0 +1,19 @@
+.btn{
+  width: fit-content;
+  padding: 1rem 3rem;
+  border-radius:12rem;
+  background-color:$color-pri;
+  position: relative;
+
+  &-text{
+    color: $color-text;
+    @include fz-14;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5; /* 21px */
+  }
+
+  &::before{
+
+  }
+}

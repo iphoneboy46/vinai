@@ -1,0 +1,12 @@
+.btn-exit-more {
+    display: none;
+
+    &.show{
+        display: block;
+    }
+}
+
+.parent-wrapper {
+    
+    transition: all 0.5s linear;
+}

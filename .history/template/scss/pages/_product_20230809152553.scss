@@ -1,0 +1,17 @@
+.box-guard {
+   
+    margin: 5rem 2.5rem;
+    border-radius: 8rem;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 87, 193, 0.8) 0%,
+        rgba(15, 136, 250, 0.8) 100%,
+        rgba(96, 176, 252, 0.8) 100%
+    );
+    backdrop-filter: blur(2rem);
+
+
+    &-wrap{
+        max-width: 98.6rem;
+    }
+}
